@@ -143,7 +143,7 @@ var geositeCmd = &cobra.Command{
 			if err != nil {
 				log.Fatal(err)
 			}
-			err = srs.Write(outFile, plainRuleSet)
+			err = srs.Write(outFile, plainRuleSet, C.RuleSetVersionCurrent)
 			outFile.Close()
 			if err != nil {
 				log.Fatal(err)
